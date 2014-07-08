@@ -67,7 +67,7 @@
     var delta = direction == 'prev' ? -1 : 1
     var activeIndex = this.getItemIndex(active)
     var itemIndex = (activeIndex + delta) % this.$items.length
-    return $(this.$items[itemIndex])
+    return this.$items.eq(itemIndex)
   }
 
   Carousel.prototype.to = function (pos) {
@@ -79,7 +79,7 @@
     if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid"
     if (activeIndex == pos) return this.pause().cycle()
 
-    return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
+    return this.slide(pos > activeIndex ? 'next' : 'prev', this.$items.eq(pos))
   }
 
   Carousel.prototype.pause = function (e) {

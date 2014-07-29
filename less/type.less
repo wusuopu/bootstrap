@@ -118,6 +118,93 @@ mark,
   .text-emphasis-variant(@state-danger-text);
 }
 
+// Define fundermental contextual color name classes.
+@text-link-light-bg-color:         #0086da;
+@text-link-dark-bg-color:          #01bdff;
+@text-description-light-bg-color:  #acb2be;
+@text-description-dark-bg-color:   #ffffff;
+@text-highlight-color:             #ffd941;
+@title-dark-bg-color:              #9ea8c1;
+@subtitle-light-bg-color:          #515d7a;
+@subtitle-dark-bg-color:           #67718c;
+
+
+.text-color-vars(@text-color) {
+  color: @text-color;
+}
+
+.text-link {
+  .text-color-vars(@text-link-light-bg-color);
+  a {
+    .text-color-vars(@text-link-light-bg-color);
+  }
+}
+
+.text-link-light-bg {
+  .text-color-vars(@text-link-light-bg-color);
+  a {
+    .text-color-vars(@text-link-light-bg-color);
+  }
+}
+
+.text-link-dark-bg {
+  .text-color-vars(@text-link-dark-bg-color);
+  a {
+    .text-color-vars(@text-link-dark-bg-color);
+  }
+}
+
+.text-description {
+  .text-color-vars(@text-description-light-bg-color);
+  a {
+    .text-color-vars(@text-description-light-bg-color);
+  }
+}
+
+.text-description-light-bg {
+  .text-color-vars(@text-description-light-bg-color);
+  a {
+    .text-color-vars(@text-description-light-bg-color);
+  }
+}
+
+.text-description-dark-bg {
+  .text-color-vars(@text-description-dark-bg-color);
+  a {
+    .text-color-vars(@text-description-dark-bg-color);
+  }
+}
+
+.text-link {
+  .text-color-vars(@text-link-light-bg-color);
+  a {
+    .text-color-vars(@text-link-light-bg-color);
+  }
+}
+
+.text-highlight {
+  .text-color-vars(@text-highlight-color);
+  a {
+    .text-color-vars(@text-highlight-color);
+  }
+}
+
+.title-dark-bg {
+  color: @title-dark-bg-color;
+}
+
+.subtitle {
+  .text-color-vars(@subtitle-light-bg-color);
+}
+
+.subtitle-light-bg {
+  .text-color-vars(@subtitle-light-bg-color);
+}
+
+.subtitle-dark-bg {
+  .text-color-vars(@subtitle-dark-bg-color);
+}
+
 // Contextual backgrounds
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).

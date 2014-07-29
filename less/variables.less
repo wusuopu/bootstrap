@@ -66,7 +66,7 @@
 @headings-font-family:    inherit;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          #232a3c;
 
 
 //== Iconography
@@ -142,9 +142,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+// @btn-default-color:              #333;
+// @btn-default-bg:                 #fff;
+// @btn-default-border:             #ccc;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -169,6 +169,38 @@
 @btn-link-disabled-color:        @gray-light;
 
 
+@btn-default-color:              #232a3c;
+@btn-default-bg:                 @btn-default-bg-start1;
+@btn-default-bg-start1:          #eff3fb;
+@btn-default-bg-end1:            #dae1ef;
+@btn-default-bg-start2:          @btn-default-bg-end1;
+@btn-default-bg-end2:            @btn-default-bg-start1;
+@btn-default-border:             #bfc7d9;
+
+@btn-dark-color:                 #01bdff;
+@btn-dark-bg-start1:             #2a303e;
+@btn-dark-bg-end1:               #1f2533;
+@btn-dark-bg-start2:             #383838;
+@btn-dark-bg-end2:               #2a2a2a;
+@btn-dark-border:                rgba(14,14,14,0.8);
+@btn-dark-shadow:                ~"inset 1px 1px 1px rgba(255,255,255,.07), inset -1px -1px 1px rgba(255,255,255,.07),0px 1px 1px rgba(255,255,255,.15)";
+
+@btn-light-color:                #fff;
+@btn-light-bg-start1:            #3fa3e2;
+@btn-light-bg-end1:              #0086da;
+@btn-light-bg-start2:            @btn-light-bg-end1;
+@btn-light-bg-end2:              #007bc8;
+@btn-light-border:               #086fb0;
+
+@btn-light-bg-dark-color:        #fff;
+@btn-light-bg-dark-bg-start1:    rgba(63,163,226,0.8);
+@btn-light-bg-dark-bg-end1:      rgba(0,134,218,0.8);
+@btn-light-bg-dark-bg-start2:    #0086da;
+@btn-light-bg-dark-bg-end2:      #3fa3e2;
+@btn-light-bg-dark-border:       #04395a;
+
+
+
 //== Forms
 //
 //##
@@ -181,11 +213,11 @@
 //** Text color for `<input>`s
 @input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   #c9d1e1;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             #96b0e8;
 
 //** Placeholder text color
 @input-color-placeholder:        #999;
@@ -422,6 +454,17 @@
 @nav-pills-border-radius:                   @border-radius-base;
 @nav-pills-active-link-hover-bg:            @component-active-bg;
 @nav-pills-active-link-hover-color:         @component-active-color;
+
+//== new Pills tabs style
+@nav-pills-tabs-border-radius:            11px;
+@nav-pills-tabs-active-link-hover-bg:     #0086da;
+@nav-pills-tabs-active-link-hover-color:  @component-active-color;
+@nav-pills-tabs-normal-link-hover-color:  #515d7a;
+@nav-pills-tabs-font-size:                12px;
+@nav-pills-tabs-padding-top:              5px;
+@nav-pills-tabs-padding-bottom:           5px;
+@nav-pills-tabs-padding-left:             14px;
+@nav-pills-tabs-padding-right:            @nav-pills-tabs-padding-left;
 
 
 //== Pagination
@@ -759,22 +802,25 @@
 @badge-font-weight:           bold;
 @badge-line-height:           1;
 @badge-border-radius:         10px;
+@badge-notice-border-radius:  11px;
+@badge-notice-background-color:  #0086da;
 
 
 //== Breadcrumbs
 //
 //##
 
-@breadcrumb-padding-vertical:   8px;
-@breadcrumb-padding-horizontal: 15px;
+// @breadcrumb-padding-vertical:   8px;
+// @breadcrumb-padding-horizontal: 15px;
+@breadcrumb-padding: 32px 15px 20px 40px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-bg:                 #eef1f7;
 //** Breadcrumb text color
-@breadcrumb-color:              #ccc;
+@breadcrumb-color:              @text-color;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @gray-light;
+@breadcrumb-active-color:       @text-color;
 //** Textual separator for between breadcrumb elements
-@breadcrumb-separator:          "/";
+@breadcrumb-separator:          ">";
 
 
 //== Carousel
@@ -830,7 +876,7 @@
 //** Abbreviations and acronyms border color
 @abbr-border-color:           @gray-light;
 //** Headings small color
-@headings-small-color:        @gray-light;
+@headings-small-color:        #515d7a;
 //** Blockquote small color
 @blockquote-small-color:      @gray-light;
 //** Blockquote font size
@@ -845,3 +891,9 @@
 @hr-border:                   @gray-lighter;
 
 
+//modaless
+
+
+@modaless-margin-horizontal: 200px;
+@modaless-inner-padding: 40px;
+@oauth-icon-size: 36px;

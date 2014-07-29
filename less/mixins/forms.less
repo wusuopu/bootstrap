@@ -22,9 +22,9 @@
     border-color: @border-color;
     .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
     &:focus {
-      border-color: darken(@border-color, 10%);
-      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@border-color, 20%);
-      .box-shadow(@shadow);
+      border-color: @border-color;
+      // @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@border-color, 20%);
+      // .box-shadow(@shadow);
     }
   }
   // Set validation states also for addons
@@ -39,6 +39,25 @@
   }
 }
 
+.form-control-validation-error(@text-color: #555; @border-color: #ccc; @background-color: #f5f5f5) {
+
+  .form-control-validation(@text-color; @border-color; @background-color);
+
+  .form-control {
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), inset 2px 2px 0 #ff9358, inset -2px -2px 0 #ff9358");
+  }
+
+  .form-control-inverse {
+    @border-color: rgba(1,1,1,0.5);
+    border-color: #000; //fallback
+    border-color: @border-color;
+    &:focus {
+      border-color: #000; //fallback
+      border-color: @border-color;
+    }
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), inset 2px 2px 0 rgba(232,158,109,.82), inset -2px -2px 0 rgba(232,158,109,.82)");
+  }
+}
 
 // Form control focus state
 //
@@ -53,11 +72,13 @@
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
 .form-control-focus(@color: @input-border-focus) {
-  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+  // @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
   &:focus {
     border-color: @color;
     outline: 0;
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+    .box-shadow(inset 0 1px 3px rgba(69,100,161,.25));
+    @text-placeholder-color: #232a3c;
+    .placeholder(@text-placeholder-color);
   }
 }
 

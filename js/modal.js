@@ -16,6 +16,7 @@
   var Modal = function (element, options) {
     this.options        = options
     this.$body          = $(document.body)
+    this.$countdown     = 1.5
     this.$element       = $(element)
     this.$backdrop      =
     this.isShown        = null
@@ -38,7 +39,8 @@
   Modal.DEFAULTS = {
     backdrop: true,
     keyboard: true,
-    show: true
+    show: true,
+    modaless: false
   }
 
   Modal.prototype.toggle = function (_relatedTarget) {
@@ -62,6 +64,11 @@
     this.escape()
 
     this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+
+    // modaless mode
+    if (this.options.modaless) {
+      window.setTimeout(function () { that.hide() }, 1000 * this.$countdown)
+    }
 
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')

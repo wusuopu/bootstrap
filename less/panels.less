@@ -248,3 +248,67 @@
 .panel-danger {
   .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
 }
+
+
+// User Defined Panels
+
+//
+// OAuth Panels
+// --------------------------------------------------
+
+.oauth-panel {
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      list-style-type: none;
+      float: left;
+
+      a {
+        display:block;
+        color: @text-color;
+        background: white;
+        width: @oauth-icon-size;
+        height: @oauth-icon-size;
+        font-size: @oauth-icon-size;
+        line-height: @oauth-icon-size;
+        border-radius: 50%;
+        text-indent: 4px;
+        margin-right: 25px;
+        margin-bottom: 9px;
+
+        &:hover {
+          color: white;
+          background: @text-color;
+        }
+      }
+    }
+  }
+}
+
+.message-panel{
+  .auth-status-icon {
+    margin-bottom: 20px;
+  }
+
+  .status-message {
+    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0,0,0,.25);
+  }
+
+  .additional-info {
+    padding-top: 16px;
+    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(255,255,255,.05);
+
+    a {
+     margin-right: 10px;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}

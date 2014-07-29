@@ -139,6 +139,40 @@
 }
 
 
+// new Pills tabs style
+// -------------------------
+.nav-pills-tabs {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: @nav-pills-tabs-border-radius;
+      color: @nav-pills-tabs-normal-link-hover-color;
+      font-size: @font-size-small;
+      padding-top: @nav-pills-tabs-padding-top;
+      padding-bottom: @nav-pills-tabs-padding-bottom;
+      padding-left: @nav-pills-tabs-padding-left;
+      padding-right: @nav-pills-tabs-padding-right;
+      line-height: 1;
+    }
+    + li {
+      margin-left: 12px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-pills-tabs-active-link-hover-color;
+        background-color: @nav-pills-tabs-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+
 // Stacked pills
 .nav-stacked {
   > li {

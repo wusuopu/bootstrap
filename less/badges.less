@@ -9,7 +9,7 @@
   min-width: 10px;
   padding: 3px 7px;
   font-size: @font-size-small;
-  font-weight: @badge-font-weight;
+  // font-weight: @badge-font-weight;
   color: @badge-color;
   line-height: @badge-line-height;
   vertical-align: baseline;
@@ -52,4 +52,38 @@
   .nav-pills > li > a > & {
     margin-left: 3px;
   }
+}
+
+
+// Base class
+.badge-notice {
+  padding: 1px 7px 2px;
+  background-color: @badge-notice-background-color;
+  border-radius: @badge-notice-border-radius;
+}
+
+// Badges Sizes
+// --------------------------------------------------
+
+.badge-lg {
+  font-weight: @badge-font-weight;
+  min-width: 32px;
+  padding: 5px 9px;
+}
+
+
+// Badges Type
+// --------------------------------------------------
+
+.badge-nav {
+  background-color: #e64c66;
+  border-radius: 4px;
+}
+
+.badge-list-read {
+  background-color: #d3d3d3;
+}
+
+.badge-list-unread {
+  background-color: @badge-notice-background-color;
 }

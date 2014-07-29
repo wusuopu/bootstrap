@@ -4,11 +4,13 @@
 
 
 .breadcrumb {
-  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  padding: @breadcrumb-padding;
   margin-bottom: @line-height-computed;
+  margin-bottom: 0;
   list-style: none;
   background-color: @breadcrumb-bg;
   border-radius: @border-radius-base;
+  font-size: 18px;
 
   > li {
     display: inline-block;
@@ -22,5 +24,9 @@
 
   > .active {
     color: @breadcrumb-active-color;
+  }
+
+  a {
+    color: @text-color;
   }
 }

@@ -10,13 +10,12 @@
 
   &:hover,
   &:focus,
-  &.focus,
   &:active,
   &.active,
   .open > .dropdown-toggle& {
     color: @color;
-    background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+    // background-color: darken(@background, 10%);
+        // border-color: darken(@border, 12%);
   }
   &:active,
   &.active,
@@ -29,7 +28,6 @@
     &,
     &:hover,
     &:focus,
-    &.focus,
     &:active,
     &.active {
       background-color: @background;
@@ -40,6 +38,39 @@
   .badge {
     color: @background;
     background-color: @color;
+  }
+}
+
+.button-with-gradient(@btn-color; @btn-background-gradient-start1; @btn-background-gradient-end1; @btn-background-gradient-start2; @btn-background-gradient-end2; @btn-border) {
+  color: @btn-color;
+  #gradient > .vertical(@start-color: @btn-background-gradient-start1; @end-color: @btn-background-gradient-end1);
+  background-repeat: repeat;
+  border-color: rgb(red(@btn-border), green(@btn-border), blue(@btn-border)); //fallback
+  border-color: @btn-border;
+
+  &:hover,
+  &:focus{
+    color: @btn-color;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    #gradient > .vertical(@start-color: @btn-background-gradient-start2; @end-color: @btn-background-gradient-end2);
+    background-repeat: repeat;
+    color: @btn-color;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: rgb(red(@btn-border), green(@btn-border), blue(@btn-border)); //fallback
+      border-color: @btn-border;
+    }
   }
 }
 

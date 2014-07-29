@@ -60,6 +60,11 @@
   outline: 0;
 }
 
+.modaless-content {
+  .modal-content();
+  border-radius: 0;
+}
+
 // Modal background
 .modal-backdrop {
   position: fixed;
@@ -97,6 +102,13 @@
 .modal-body {
   position: relative;
   padding: @modal-inner-padding;
+}
+
+.modaless-body {
+  .modal-body();
+  padding-top: @modaless-inner-padding;
+  padding-bottom: @modaless-inner-padding;
+  text-align: center;
 }
 
 // Footer (for actions)
@@ -137,7 +149,14 @@
     width: @modal-md;
     margin: 30px auto;
   }
-  .modal-content {
+
+  .modaless-dialog{
+    .modal-dialog();
+    margin: @modaless-margin-horizontal auto;
+  }
+
+  .modal-content,
+  .modaless-content {
     .box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
@@ -147,4 +166,22 @@
 
 @media (min-width: @screen-md-min) {
   .modal-lg { width: @modal-lg; }
+}
+
+.modaless{
+  .modal();
+}
+
+.modaless-ok{
+  background: rgb(238,248,255);
+  background: rgba(238,248,255,0.9);
+  border: 5px solid rgb(0,134,218);
+  border: 5px solid rgba(0,134,218,0.64);
+}
+
+.modaless-error{
+  background: rgb(255,241,236);
+  background: rgba(255,241,236,0.9);
+  border: 5px solid rgb(234,94,40);
+  border: 5px solid rgba(234,94,40,0.64);
 }

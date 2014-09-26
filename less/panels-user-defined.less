@@ -1,0 +1,166 @@
+// User Defined Panels
+
+//
+// OAuth Panels
+// --------------------------------------------------
+
+.oauth-panel {
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      list-style-type: none;
+      float: left;
+      margin: 4px 8px 5px;
+
+      a {
+        display:block;
+        color: #fff;
+        width: @oauth-icon-size;
+        height: @oauth-icon-size;
+        font-size: @oauth-icon-size;
+        line-height: 0;
+        border-radius: 50%;
+      }
+
+      .icon-providers {
+
+        &:before {
+          opacity: .5;
+        }
+
+        &:hover:before {
+          content: .85;
+        }
+
+        &.icon-baidu {
+          &:before {
+            content: "\e624";
+          }
+
+          &:hover:before {
+            content: "\e625";
+          }
+        }
+
+        &.icon-twitter {
+          &:before {
+            content: "\e626";
+          }
+
+          &:hover:before {
+            content: "\e627";
+          }
+        }
+
+        &.icon-microsoft {
+          &:before {
+            content: "\e628";
+          }
+
+          &:hover:before {
+            content: "\e629";
+          }
+        }
+
+        &.icon-facebook {
+          &:before {
+            content: "\e62a";
+          }
+
+          &:hover:before {
+            content: "\e62b";
+          }
+        }
+        
+        &.icon-googleplus {
+          &:before {
+            content: "\e62c";
+          }
+
+          &:hover:before {
+            content: "\e62d";
+          }
+        }
+        
+        &.icon-douban {
+          &:before {
+            content: "\e62e";
+          }
+
+          &:hover:before {
+            content: "\e62f";
+          }
+        }
+        
+        &.icon-qq {
+          &:before {
+            content: "\e630";
+          }
+
+          &:hover:before {
+            content: "\e631";
+          }
+        }
+        
+        &.icon-neteaseweibo {
+          &:before {
+            content: "\e632";
+          }
+
+          &:hover:before {
+            content: "\e633";
+          }
+        }
+        
+        &.icon-3rd-more {
+          &:before {
+            content: "\e634";
+          }
+
+          &:hover:before {
+            content: "\e635";
+          }
+        }
+        
+        &.icon-weibo {
+          &:before {
+            content: "\e636";
+          }
+
+          &:hover:before {
+            content: "\e637";
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+.message-panel{
+  .auth-status-icon {
+    margin-bottom: 20px;
+  }
+
+  .status-message {
+    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0,0,0,.25);
+  }
+
+  .additional-info {
+    padding-top: 16px;
+    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(255,255,255,.05);
+
+    a {
+     margin-right: 10px;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}

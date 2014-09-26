@@ -1,0 +1,80 @@
+//
+// Deepin icons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="deepinicon deepinicon-forum"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'deepinicons';
+  src: url('@{deepin-icon-font-path}@{deepin-icon-font-name}.eot');
+  src: url('@{deepin-icon-font-path}@{deepin-icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{deepin-icon-font-path}@{deepin-icon-font-name}.woff') format('woff'),
+       url('@{deepin-icon-font-path}@{deepin-icon-font-name}.ttf') format('truetype'),
+       url('@{deepin-icon-font-path}@{deepin-icon-font-name}.svg#@{deepin-icon-font-svg-id}') format('svg');
+}
+
+// Catchall baseclass
+.deepinicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'deepinicons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Individual icons
+.deepinicon-forum             { &:before{ content: "\e600"; } }
+.deepinicon-theme             { &:before{ content: "\e601"; } }
+.deepinicon-wiki              { &:before{ content: "\e602"; } }
+.deepinicon-blogshare         { &:before{ content: "\e603"; } }
+.deepinicon-game              { &:before{ content: "\e604"; } }
+.deepinicon-software          { &:before{ content: "\e605"; } }
+.deepinicon-donate            { &:before{ content: "\e606"; } }
+.deepinicon-settings          { &:before{ content: "\e607"; } }
+.deepinicon-i18n              { &:before{ content: "\e608"; } }
+.deepinicon-profile           { &:before{ content: "\e609"; } }
+.deepinicon-mail              { &:before{ content: "\e60a"; } }
+.deepinicon-deepin-logo       { &:before{ content: "\e60b"; } }
+.deepinicon-emoticon          { &:before{ content: "\e60c"; } }
+.deepinicon-screenshot        { &:before{ content: "\e60d"; } }
+.deepinicon-camera            { &:before{ content: "\e60e"; } }
+.deepinicon-comment           { &:before{ content: "\e60f"; } }
+.deepinicon-compose           { &:before{ content: "\e610"; } }
+.deepinicon-totop             { &:before{ content: "\e611"; } }
+.deepinicon-connect           { &:before{ content: "\e612"; } }
+.deepinicon-favor             { &:before{ content: "\e613"; } }
+.deepinicon-refresh           { &:before{ content: "\e614"; } }
+.deepinicon-sinaweibo         { &:before{ content: "\e615"; } }
+.deepinicon-blog              { &:before{ content: "\e616"; } }
+.deepinicon-search            { &:before{ content: "\e617"; } }
+.deepinicon-undo              { &:before{ content: "\e618"; } }
+.deepinicon-report            { &:before{ content: "\e619"; } }
+.deepinicon-ban               { &:before{ content: "\e61a"; } }
+.deepinicon-home              { &:before{ content: "\e61b"; } }
+.deepinicon-community         { &:before{ content: "\e61c"; } }
+.deepinicon-vote              { &:before{ content: "\e61d"; } }
+.deepinicon-closed            { &:before{ content: "\e61e"; } }
+.deepinicon-unsolved          { &:before{ content: "\e61f"; } }
+.deepinicon-solved            { &:before{ content: "\e620"; } }
+.deepinicon-message           { &:before{ content: "\e621"; } }
+.deepinicon-circleadd         { &:before{ content: "\e622"; } }
+.deepinicon-itemdot           { &:before{ content: "\e623"; } }
+.deepinicon-benefit-osc       { &:before{ content: "\e638"; } }
+.deepinicon-benefit-community { &:before{ content: "\e639"; } }
+.deepinicon-benefit-sync      { &:before{ content: "\e63a"; } }
+.deepinicon-mailsend          { &:before{ content: "\e63b"; } }
+.deepinicon-bug               { &:before{ content: "\e63c"; } }
+.deepinicon-add               { &:before{ content: "\e63d"; } }
+.deepinicon-delete            { &:before{ content: "\e63e"; } }
+.deepinicon-edit              { &:before{ content: "\e63f"; } }
+.deepinicon-wrong             { &:before{ content: "\e640"; } }
+.deepinicon-tick              { &:before{ content: "\e641"; } }
+.deepinicon-like              { &:before{ content: "\e642"; } }

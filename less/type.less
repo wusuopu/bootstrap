@@ -123,7 +123,8 @@ mark,
 @text-link-dark-bg-color:          #01bdff;
 @text-description-light-bg-color:  #acb2be;
 @text-description-dark-bg-color:   #ffffff;
-@text-highlight-color:             #ffd941;
+@text-highlight-light-bg-color:    #ea5e28;
+@text-highlight-dark-bg-color:     #ffd941;
 @title-dark-bg-color:              #9ea8c1;
 @subtitle-light-bg-color:          #515d7a;
 @subtitle-dark-bg-color:           #67718c;
@@ -183,11 +184,26 @@ mark,
 }
 
 .text-highlight {
-  .text-color-vars(@text-highlight-color);
+  .text-color-vars(@text-highlight-dark-bg-color);
   a {
-    .text-color-vars(@text-highlight-color);
+    .text-color-vars(@text-highlight-dark-bg-color);
   }
 }
+
+.text-highlight-light-bg {
+  .text-color-vars(@text-highlight-light-bg-color);
+  a {
+    .text-color-vars(@text-highlight-light-bg-color);
+  }
+}
+
+.text-highlight-dark-bg {
+  .text-color-vars(@text-highlight-dark-bg-color);
+  a {
+    .text-color-vars(@text-highlight-dark-bg-color);
+  }
+}
+
 
 .title-dark-bg {
   color: @title-dark-bg-color;
